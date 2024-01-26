@@ -23,7 +23,7 @@ def detail(row_id):
     for row in object_list:
         if row['id'] == row_id:
             return render_template(template, _object = row)
-    return render_template(template, _object = 1)
+    abort(404)
 
 if __name__ == '__main__':
     app.run(debug = True, use_reloader = True)
